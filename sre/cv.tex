@@ -31,7 +31,9 @@
 
   \begin{tabular}{rl}
     github.com/jspc &  Rotherhithe, SE16
-  \end{tabular}
+  \end{tabular} \\
+
+  {\footnotesize\textit{This CV may be found at \url{https://assets.jspc.pw/jamescondron_sre_cv.pdf}}}
 \end{center}
 
 \section{Specialities}
@@ -90,24 +92,29 @@ I Specialise in
 \section{Portfolio}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \entry
+  {2019}
+  {This CV}
+  {https://github.com/jspc/cv}
+  {My CV is written in \LaTeX, and is deployed to a digitalocean space via \href{https://circleci.com/gh/jspc/cv}{circleci}, using a \href{https://github.com/jspc/ci-worker}{CI Worker} container of my own creation. It deploys and handles cache invalidation on tagged releases}
 
-\entry
-{2018}
-{go-lo}
-{https://github.com/go-lo/go-lo}
-{A distributed loadtesting platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead loadtests. These loadtests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
+  \entry
+  {2018}
+  {go-lo}
+  {https://github.com/go-lo/go-lo}
+  {A distributed loadtesting platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead loadtests. These loadtests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
 
-\entry
-{2016}
-{Snooper Trooper}
-{https://github.com/jspc/snooper-trooper}
-{Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
+  \entry
+  {2016}
+  {Snooper Trooper}
+  {https://github.com/jspc/snooper-trooper}
+  {Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
 
-\entry
-{2015}
-{catz}
-{https://github.com/jspc/catz}
-{Remote/Local loadtesting tooling for http(s) endpoints}
+  \entry
+  {2015}
+  {catz}
+  {https://github.com/jspc/catz}
+  {Remote/Local loadtesting tooling for http(s) endpoints}
 
 \end{tabular*}
 
