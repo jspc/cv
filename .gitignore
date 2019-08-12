@@ -1,6 +1,4 @@
-*
-!README.md
-!Dockerfile
-!sre/cv.tex
-!dx/cv.tex
-!.gitignore
+*.aux
+*.log
+*.pdf
+*.out
