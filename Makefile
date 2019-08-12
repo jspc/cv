@@ -22,4 +22,4 @@ deploy:
 	aws s3 sync dist/ s3://assets-jspc-pw/$(CIRCLE_TAG) --endpoint=https://fra1.digitaloceanspaces.com --acl=public-read
 
 purge:
-	curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${DOTOKEN}" -d '{"files": ["*"]}' "https://api.digitalocean.com/v2/cdn/endpoints/$(CDN)/cache"
+	@curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer ${DOTOKEN}" -d '{"files": ["*"]}' "https://api.digitalocean.com/v2/cdn/endpoints/$(CDN)/cache"
