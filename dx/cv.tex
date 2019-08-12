@@ -1,0 +1,197 @@
+\documentclass[11pt,a4paper,sans]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.8]{geometry}
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{3.5ex}{1.5ex}
+
+\newcommand{\entry}[4]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\begin{center}
+  {\huge\textbf{James Condron}}\\
+  \textbf{Principal Site Reliability Engineer} \\
+
+  \begin{tabular}{rl}
+    github.com/jspc &  Rotherhithe, SE16
+  \end{tabular}
+\end{center}
+
+\section{Specialities}
+\begin{tabular}{lll}
+\tabitem Linux & \tabitem Kubernetes and Helm & \tabitem Reliability Engineering \\
+\tabitem golang & \tabitem APM & \tabitem Coaching \\
+\tabitem Technical Architecture & \tabitem Systems Administration & \tabitem Database Management \\
+\tabitem Automation & \tabitem AWS & \tabitem Terraform  \\
+\end{tabular}
+
+\section{About me}
+A DevOps specialist working within Reliabiltiy Engineering, I have spent the majority of my career working across teams, geographically or by responsibility, solving scaling and performance in large scale production systems; largely split between Publishing and Finance, though with no small amount of ISP and Datacenter work. \\
+\\
+I've a proven track record in the development of both internal tooling and external SDKs, with an emphasis on Developer Experience (DX) principles; specifically around open communication, facades over strict pradigms (for SDK development), and clear monitoring data emission.
+\\
+I Specialise in
+
+\begin{itemize}
+\item Linux engineering and administration
+\item Reliability Engineering
+\item Distributed Systems using Kubernetes and Helm
+\item Architecture and Systems Design
+\item Technical Team Coaching and Mentorship
+\item Postgres administration and tuning, along with the underlying disks and OS
+\item Provisioning and orchestration with Terraform, Ansible, Packer, \texttt{userdata}
+\item NoSQL (Predominantly MongoDB, CouchDB, redis and memcached) management
+\item Message queuing/ brokering with kafka, rabbitmq, 0mq
+\item Community and Development Engagement (FOSS and within teams)
+\end{itemize}
+
+\section{Systems Administration}
+
+\begin{itemize}
+\item Linux to an extremely high level
+  \begin{itemize}
+  \item containerisation and virtualisation
+  \item kernel call tracing
+  \item process, open file tracing
+  \item security and management
+  \item architecture and design
+  \end{itemize}
+\end{itemize}
+
+\section{Programming}
+
+\begin{itemize}
+\item Golang to a high level \href{https://github.com/go-lo/go-lo}{github://go-lo/go-lo}
+\item Bash to a high level \href{https://github.com/jspc/homedir}{github://jspc/homedir}
+\item Ruby to a high level \href{https://github.com/jspc/mud}{github://jspc/mud}
+\item \LaTeX \ to a high level \href{https://github.com/jspc/cv}{github://jspc/cv}
+\item Python to a comfortable standard \href{https://github.com/jspc/supergrass}{github://jspc/supergrass}
+\item C to a reasonable standard \href{https://github.com/jspc/tinyfib}{github://jspc/tinyfib}
+\item NASM to a reasonable standard \href{https://github.com/jspc/tinyfib}{github://jspc/tinyfib}
+\end{itemize}
+
+\section{Portfolio}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+
+  \entry
+  {2018}
+  {go-lo}
+  {https://github.com/go-lo/go-lo}
+  {A distributed loadtesting platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead loadtests. These loadtests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
+
+  \entry
+  {2017}
+  {gincorp/gin}
+  {https://github.com/gincorp/gin}
+  {A distributed workflow engine, written in golang, which uses rabbitmq as a job broker}
+
+  \entry
+  {2016}
+  {Snooper Trooper}
+  {https://github.com/jspc/snooper-trooper}
+  {Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
+
+  \entry
+  {2016}
+  {mkrepo}
+  {https://github.com/jspc/mkrepo}
+  {Create a repo on github, create a circleci \texttt{config.yaml}, push a container image to Dockerhub, and create some simple documentation and license data. While this project was never really finished, it works well enough to generate simple projects- it was even used to bootstrap its self}
+
+  \entry
+  {2015}
+  {catz}
+  {https://github.com/jspc/catz}
+  {Remote/Local loadtesting tooling for http(s) endpoints}
+
+\end{tabular*}
+
+\section{Employment}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+\entry
+{October 2018 - Present}
+{The Culture Trip}
+{Site Reliability Engineer}
+{Coaching engineers and squads, between a London team and a Tel Aviv team, towards thinking of Supportability first for products. Within this I spent roughly half of my time producing materials, with developer stakeholders, around training and policy for supporting products in production, and the other half developing tooling and interfaces for the monitoring and reporting of such services. Within my remit is the maintenance, within my team, of the Kubernetes platform we run production systems on.}
+
+\entry
+{Februrary 2017 - October 2018}
+{Beamly Ltd.}
+{Principal Site Reliability Engineer}
+{Solutionisation and build out, within my own team, of: metrics gathering, logging, error alerting, backup (with testing), and load and security testing of an estate of websites and services, largely backed by golang and docker, in AWS, and with a mix of time series databases, such as influxdb, and document stores, such as elasticsearch. The solution built was used across many teams internationally, which meant training and documentation was a very large part of the work we produced.}
+
+\entry
+{April 2016 - November 2016}
+{Financial Times}
+{Contract Integration Engineer}
+{To architect, develop and rollout the FT's new flagship video platform, including custom config management tooling, container platform, consul backed routing and api driven monitoring based on shopify's \emph{dashing}.}
+
+\entry
+{July 2015 - April 2016}
+{Financial Times}
+{Contract Integration Engineer; API Technical Lead}
+{To build and maintain a large scale API gateway for internal customers and b2b targets, and the governance thereof; while developing new products, coaching permanent staff toward their personal development goals, and training offshore teams in the management of this gateway.}
+
+\entry
+{November 2013 - June 2015}
+{Funding Circle}
+{Devops Engineer}
+{Green field build out of deployment tooling and testing platform, re-architecture of platform and underlying databases; development of devops practices and mentoring; editorship of the funding circle tech blog.}
+
+\entry
+{June 2013 - November 2013}
+{Hogarth Worldwide}
+{Senior Devops Engineer}
+{Management of large video platform for multinational advertising house, developer of ops tooling and creation and management of api gateway for client; mentorship of junior colleagues.}
+
+\entry
+{January 2012 - June 2013}
+{Simply Business}
+{Production Systems Administrator}
+{Development and management of jit tooling platform, ops assistance and tooling to qa teams, development and management of backup and disk management tooling; mentorship and training junior colleagues.}
+
+\entry
+{July 2010 - December 2012}
+{Coreix ltd.}
+{Senior Technician/Lead}
+{Management of pen testing, integration testing of cloud platforms, helped take down k00bface worm; internal tools development and testing.}
+
+\end{tabular*}
+
+\section{Education}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+\entry
+{start 2017}
+{Open university}
+{bachelor of engineering}
+{OU distance course}
+
+\entry
+{2009}
+{University of Huddersfield}
+{secure and forensic computing}
+{Two years credits to a degree, no longer being pursued}
+
+\end{tabular*}
+
+
+\end{document}
