@@ -2,9 +2,9 @@ CDN ?= 37bb669b-1686-42ae-9433-f0d185208cf1
 
 .PHONY: default all
 
-default: all
+default: build
 
-all: dist dist/jamescondron_dx_cv.pdf dist/jamescondron_sre_cv.pdf
+build: dist dist/jamescondron_dx_cv.pdf dist/jamescondron_sre_cv.pdf
 
 dist:
 	mkdir -p dist

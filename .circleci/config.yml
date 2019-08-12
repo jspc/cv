@@ -9,13 +9,13 @@ jobs:
     <<: *config_docker
     steps:
       - checkout
-      - run: make
+      - run: make build
 
   deploy:
     <<: *config_docker
     steps:
     - checkout
-    - run: make
+    - run: make build
     - run: make deploy
     - run: make purge
 
