@@ -1,16 +1,8 @@
-cv
-==
+# cv
 
-| who       | what |
-|-----------|------|
-| circleci  | https://circleci.com/gh/jspc/cv   |
-| licence   | MIT   |
+This project provides my CV; it uses no external classes/ typefaces which aren't generally distributed with latex distributions.
 
-
-This project provides my CV. It requires:
-
-* the `friggeri-cv` latex package
-
+This project contains two CVs, my CV for SRE work, and my CV for DX work. Either CV can be built in the same way, by navigating to the relevant subdirectory (`sre` for SRE stuff, `dx` for Developer Experience/ Tooling) and following the step(s) in the Building section below.
 
 Building
 --
@@ -24,7 +16,7 @@ Licence
 
 MIT License
 
-Copyright (c) 2016 jspc
+Copyright (c) 2016, 2019 jspc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
