@@ -16,6 +16,10 @@ dist/jamescondron_dx_cv.pdf: dist
 dist/jamescondron_sre_cv.pdf: dist
 	texi2pdf sre/cv.tex -o dist/jamescondron_sre_cv.pdf
 
+dist/jamescondron_vpe_cv.pdf: dist
+	texi2pdf vpe/cv.tex -o dist/jamescondron_vpe_cv.pdf
+
+
 .PHONY: deploy purge
 deploy:
 	aws s3 sync dist/ s3://assets-jspc-pw/latest --endpoint=https://fra1.digitaloceanspaces.com --acl=public-read
