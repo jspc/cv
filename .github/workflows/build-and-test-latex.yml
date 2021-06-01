@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    tags-ignore:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build CVs
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: | 
+           sre/cv.tex
+           dx/cv.tex
+           vpe/cv.tex
+           
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cv
+          path: dist/
