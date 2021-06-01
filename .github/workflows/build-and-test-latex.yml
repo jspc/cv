@@ -1,6 +1,8 @@
-name: CI
+name: Non-release build
 on:
   push:
+    branches:
+      - '**'
     tags-ignore:
       - '**'
   workflow_dispatch:
@@ -12,13 +14,12 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Build CVs
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/texlive-action/full@v1
         with:
-          root_file: | 
-           sre/cv.tex
-           dx/cv.tex
-           vpe/cv.tex
-           
+          run: |
+            apk add make
+            make      
+                 
       - uses: actions/upload-artifact@v2
         with:
           name: cv
