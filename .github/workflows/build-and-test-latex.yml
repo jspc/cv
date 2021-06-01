@@ -1,26 +1,33 @@
-name: Non-release build
-on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '**'
-  workflow_dispatch:
+name: Build and deploy
+on: [push, release, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
+      - name: Generate urls
+        if: startsWith(github.ref, 'refs/tags/')
+        run: make urls
+
       - name: Build CVs
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
             apk add make
-            make      
-                 
+            make
+
       - uses: actions/upload-artifact@v2
         with:
           name: cv
           path: dist/
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            dist/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -34,6 +34,11 @@
   \end{tabular} \\
 
   {\footnotesize\textit{The master version of this file may be found at \url{https://github.com/jspc/cv/blob/master/sre/cv.tex}}}
+
+  \IfFileExists{./sre/.tag-ref}%
+  {\footnotesize\textit{And this PDF may be found at https://github.com/jspc/cv/releases/tag/\input{./sre/.tag-ref}}}%
+  {}
+
 \end{center}
 
 \section{Specialities}
@@ -109,7 +114,7 @@ I Specialise in
   {2019}
   {This CV}
   {https://github.com/jspc/cv}
-  {My CV is written in \LaTeX, and is deployed to a digitalocean space via \href{https://circleci.com/gh/jspc/cv}{circleci}, using a \href{https://github.com/jspc/ci-worker}{CI Worker} container of my own creation. It deploys and handles cache invalidation on tagged releases}
+  {My CV is written in \LaTeX, and is built and deployed through Github actions}
 
   \entry
   {2018}
