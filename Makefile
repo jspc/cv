@@ -19,5 +19,5 @@ dist:
 %/.tag-ref:
 	printf $(GITHUB_SHORT_REF) > $@
 
-dist/jamescondron_%_cv.pdf: %/cv.tex dist
+dist/jamescondron_%_cv.pdf: %/cv.tex | dist
 	xelatex -jobname=$(basename $@) $<
