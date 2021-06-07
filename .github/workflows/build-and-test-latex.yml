@@ -35,4 +35,4 @@ jobs:
       - name: Re-deploy website
         if: startsWith(github.ref, 'refs/tags/')
         run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jspc/jspc.github.io/dispatches --data '{"event_type": "Update CV"}'
+          curl -XPOST -H "Authorization: token ${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/jspc/jspc.github.io/dispatches --data '{"event_type": "deploy_for_cv"}'
