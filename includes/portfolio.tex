@@ -1,0 +1,40 @@
+\section{Portfolio}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \entry
+  {2021}
+  {SeoulOS}
+  {https://github.com/jspc/seoulos}
+  {SeoulOS is a micro-kernel research project written in rust. It aims to be a proof-of-concept for running standard workloads on clusters of commodity hardware}
+
+  \entry
+  {2020}
+  {Vinyl Linux}
+  {https://github.com/vinyl-linux}
+  {Vinyl Linux is a Linux distribution centred around \texttt{vin}, a super-fast package manager written as a client/server pair in golang, and \texttt{vinyl linux-utils}, a \texttt{busybox}-alike set of standard tools, also written in golang. Vinyl Linux can parse and install \texttt{apk} packages from Alpine Linux}
+
+  \entry
+  {2019-2022}
+  {This CV}
+  {https://github.com/jspc/cv}
+  {My CV is written in \LaTeX, and is deployed to a digitalocean space via \href{https://circleci.com/gh/jspc/cv}{circleci}, using a \href{https://github.com/jspc/ci-worker}{CI Worker} container of my own creation. It deploys and handles cache invalidation on tagged releases}
+
+  \entry
+  {2018}
+  {go-lo}
+  {https://github.com/go-lo/go-lo}
+  {A distributed load-testing platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead load-tests. These load-tests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
+
+  \entry
+  {2017}
+  {gincorp/gin}
+  {https://github.com/gincorp/gin}
+  {A distributed workflow engine, written in golang, which uses rabbitmq as a job broker}
+
+  \entry
+  {2016}
+  {Snooper Trooper}
+  {https://github.com/jspc/snooper-trooper}
+  {Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
+
+\end{tabular*}

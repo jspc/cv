@@ -24,22 +24,7 @@
 \setcounter{secnumdepth}{0}
 
 \begin{document}
-
-\begin{center}
-  {\huge\textbf{James Condron}}\\
-  \textbf{Principal Site Reliability Engineer} \\
-
-  \begin{tabular}{rl}
-    github.com/jspc & Yongsan-gu, Seoul
-  \end{tabular} \\
-
-  {\footnotesize\textit{The master version of this file may be found at \url{https://github.com/jspc/cv/blob/master/sre/cv.tex}}}
-
-  \IfFileExists{./sre/.tag-ref}%
-  {\footnotesize\textit{And this PDF may be found at https://github.com/jspc/cv/releases/tag/\input{./sre/.tag-ref}}}%
-  {}
-
-\end{center}
+\input{./includes/headpiece.tex}
 
 \section{Specialities}
 \begin{tabular}{lll}
@@ -69,143 +54,10 @@ I Specialise in
 \item Elasticsearch; lucene query design and cluster management specifically
 \end{itemize}
 
-\section{Systems Administration}
-
-\begin{itemize}
-\item Linux to an extremely high level
-  \begin{itemize}
-  \item containerisation and virtualisation
-  \item kernel call tracing
-  \item process, open file tracing
-  \item security and management
-  \item architecture and design
-  \end{itemize}
-\end{itemize}
-
-\section{Programming}
-
-\begin{itemize}
-\item Golang to a high level \href{https://github.com/go-lo/go-lo}{github://go-lo/go-lo}
-\item Bash to a high level \href{https://github.com/jspc/homedir}{github://jspc/homedir}
-\item Ruby to a high level \href{https://github.com/jspc/mud}{github://jspc/mud}
-\item \LaTeX \ to a high level \href{https://github.com/jspc/cv}{github://jspc/cv}
-\item Python to a comfortable standard \href{https://github.com/jspc/supergrass}{github://jspc/supergrass}
-\item C to a reasonable standard \href{https://github.com/jspc/tinyfib}{github://jspc/tinyfib}
-\item NASM to a reasonable standard \href{https://github.com/jspc/tinyfib}{github://jspc/tinyfib}
-\end{itemize}
-
-\section{Portfolio}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-
-  \entry
-  {2019, 2020}
-  {This CV}
-  {https://github.com/jspc/cv}
-  {My CV is written in \LaTeX, and is deployed to a digitalocean space via \href{https://circleci.com/gh/jspc/cv}{circleci}, using a \href{https://github.com/jspc/ci-worker}{CI Worker} container of my own creation. It deploys and handles cache invalidation on tagged releases}
-
-  \entry
-  {2018}
-  {go-lo}
-  {https://github.com/go-lo/go-lo}
-  {A distributed load-testing platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead load-tests. These load-tests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
-
-  \entry
-  {2017}
-  {gincorp/gin}
-  {https://github.com/gincorp/gin}
-  {A distributed workflow engine, written in golang, which uses rabbitmq as a job broker}
-
-  \entry
-  {2016}
-  {Snooper Trooper}
-  {https://github.com/jspc/snooper-trooper}
-  {Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
-
-  \entry
-  {2016}
-  {mkrepo}
-  {https://github.com/jspc/mkrepo}
-  {Create a repo on github, create a circleci \texttt{config.yaml}, push a container image to Dockerhub, and create some simple documentation and license data. While this project was never really finished, it works well enough to generate simple projects- it was even used to bootstrap its self}
-
-\end{tabular*}
-
-\section{Employment}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  \entry
-  {December 2019 - August 2020}
-  {Scratch Financial}
-  {Consultant Cloud Architect}
-  {Ownership of internal platform services, leading the design, implementation, and training for the re-platforming of Scratchpay.com. First line 1-to-1s for operations team. Budgeting and cost optimisation of processes and tooling, with an emphasis on self-service platforms and open-source tooling.}
-
-
-  \entry
-  {October 2018 - August 2019}
-  {The Culture Trip}
-  {Lead Site Reliability Engineer}
-  {Coaching engineers and squads, between a London team and a Tel Aviv team, towards thinking of Supportability first for products. Within this I spent roughly half of my time producing materials, with developer stakeholders, around training and policy for supporting products in production, and the other half developing tooling and interfaces for the monitoring and reporting of such services, including Confluence and Jira integration for incidents. Maintenance of third party integrations with Auth0, Cobalt.io, and NewRelic.}
-
-  \entry
-  {February 2017 - October 2018}
-  {Beamly Ltd.}
-  {Principal Engineer, Platform Lead}
-  {Solutionisation and build out, within my own team, of: metrics gathering, logging, error alerting, backup (with testing), and load and security testing of an estate of websites and services, largely backed by golang and docker (with containers hosted in Quay.io), in AWS, and with a mix of time series databases, such as influxdb, and document stores, such as Elasticsearch. The solution built was used across many teams internationally, which meant training and documentation was a very large part of the work we produced.}
-
-  \entry
-  {April 2016 - November 2016}
-  {Financial Times}
-  {Contract Integration Engineer}
-  {To architect, develop and rollout the FT's new flagship video platform, including custom config management tooling, container platform, consul backed routing and api driven monitoring based on shopify's \emph{dashing}, with logs being shipped into Splunk, and deployment artefacts being stored in Nexus.}
-
-  \entry
-  {July 2015 - April 2016}
-  {Financial Times}
-  {Contract Integration Engineer; API Technical Lead}
-  {To build and maintain a large scale API gateway for internal customers and b2b targets, and the governance thereof; while developing new products, coaching permanent staff toward their personal development goals, and training offshore teams in the management of this gateway.}
-
-  \entry
-  {November 2013 - June 2015}
-  {Funding Circle}
-  {Devops Engineer}
-  {Green field build out of deployment tooling and testing platform, re-architecture of platform and underlying databases; development of DevOps practices and mentoring; editorship of the funding circle tech blog.}
-
-  \entry
-  {June 2013 - November 2013}
-  {Hogarth Worldwide}
-  {Senior Devops Engineer}
-  {Management of large video platform for multinational advertising house, developer of ops tooling and creation and management of api gateway for client; mentorship of junior colleagues.}
-
-  \entry
-  {January 2012 - June 2013}
-  {Simply Business}
-  {Production Systems Administrator}
-  {Development and management of jit tooling platform, ops assistance and tooling to qa teams, development and management of backup and disk management tooling; mentorship and training junior colleagues.}
-
-  \entry
-  {July 2010 - December 2012}
-  {Coreix ltd.}
-  {Senior Technician/Lead}
-  {Management of pen testing, integration testing of cloud platforms, helped take down k00bface worm; internal tools development and testing.}
-
-\end{tabular*}
-
-\section{Education}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  \entry
-  {start 2017}
-  {Open university}
-  {bachelor of engineering}
-  {OU distance course}
-
-  \entry
-  {2009}
-  {University of Huddersfield}
-  {secure and forensic computing}
-  {Two years credits to a degree, no longer being pursued}
-
-\end{tabular*}
-
+\input{includes/systems.tex}
+\input{includes/languages.tex}
+\input{includes/portfolio.tex}
+\input{includes/employment.tex}
+\input{includes/education.tex}
 
 \end{document}

@@ -25,16 +25,7 @@
 
 \begin{document}
 
-\begin{center}
-  {\huge\textbf{James Condron}}\\
-  \textbf{Principal Engineer, Engineering Manager} \\
-
-  \begin{tabular}{rl}
-    github.com/jspc &  United Kingdom
-  \end{tabular} \\
-
-  {\footnotesize\textit{The master version of this file is at \url{https://github.com/jspc/cv}}}
-\end{center}
+\input{./includes/headpiece.tex}
 
 \section{Specialities}
 \begin{tabular}{lll}
@@ -83,165 +74,10 @@ I Specialise in
   \end{itemize}
 \end{itemize}
 
-\section{Systems}
-
-\begin{itemize}
-\item Linux to an extremely high level
-  \begin{itemize}
-  \item containerisation and virtualisation
-  \item kernel call tracing
-  \item process, open file tracing
-  \item security and management
-  \item architecture and design
-  \end{itemize}
-\end{itemize}
-
-\section{Programming}
-
-\begin{itemize}
-\item Golang to a high level: \href{https://github.com/vinyl-linux/vin}{https://github.com/vinyl-linux/vin}
-\item Bash to a high level: \href{https://github.com/jspc/homedir}{https://github.com/jspc/homedir}
-\item \LaTeX \ to a high level: \href{https://github.com/jspc/cv}{https://github.com/jspc/cv}
-\item Python to a comfortable standard \href{https://github.com/jspc/article-classifier}{https://github.com/jspc/article-classifier}
-\item Rust to a comfortable standard \href{https://github.com/jspc/SeoulOS}{https://github.com/jspc/SeoulOS}
-\item C to a reasonable standard \href{https://github.com/jspc/tinyfib}{https://github.com/jspc/tinyfib}
-\item NASM to a reasonable standard \href{https://github.com/jspc/tinyfib}{https://github.com/jspc/tinyfib}
-\item Kotlin to a reasonable standard \href{https://github.com/jspc/crypt}{https://github.com/jspc/crypt}
-\end{itemize}
-
-
-\section{Portfolio}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  \entry
-  {2021}
-  {SeoulOS}
-  {https://github.com/jspc/seoulos}
-  {SeoulOS is a micro-kernel research project written in rust. It aims to be a proof-of-concept for running standard workloads on clusters of commodity hardware}
-
-  \entry
-  {2020}
-  {Vinyl Linux}
-  {https://github.com/vinyl-linux}
-  {Vinyl Linux is a Linux distribution centred around \texttt{vin}, a super-fast package manager written as a client/server pair in golang, and \texttt{vinyl linux-utils}, a \texttt{busybox}-alike set of standard tools, also written in golang. Vinyl Linux can parse and install \texttt{apk} packages from Alpine Linux}
-
-  \entry
-  {2019-2022}
-  {This CV}
-  {https://github.com/jspc/cv}
-  {My CV is written in \LaTeX, and is deployed to a digitalocean space via \href{https://circleci.com/gh/jspc/cv}{circleci}, using a \href{https://github.com/jspc/ci-worker}{CI Worker} container of my own creation. It deploys and handles cache invalidation on tagged releases}
-
-  \entry
-  {2018}
-  {go-lo}
-  {https://github.com/go-lo/go-lo}
-  {A distributed load-testing platform, written in golang. \texttt{go-lo} is designed to run consistent, low-overhead load-tests. These load-tests are self contained golang apps which expose a control plane over gRPC and output results to \texttt{STDOUT} which are then forwarded into the TICK stack.}
-
-  \entry
-  {2017}
-  {gincorp/gin}
-  {https://github.com/gincorp/gin}
-  {A distributed workflow engine, written in golang, which uses rabbitmq as a job broker}
-
-  \entry
-  {2016}
-  {Snooper Trooper}
-  {https://github.com/jspc/snooper-trooper}
-  {Builds and deploys a docker OpenVPN and tor based gateway in digital ocean utilising ansible to deploy an instance with some cloud-config which runs containers on coreos. Designed to be used alongside https://github.com/jspc/privacy-dockerfiles in order to help secure and anonymise network traffic.}
-
-\end{tabular*}
-
-\section{Employment}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-\entry
-{July 2021 - September 2021}
-{Databank, a Korean Edtech Startup}
-{Engineering Manager}
-{Line management and architectural oversight of a team of developers in Seoul, until my work permit ran out. Migration away from a frontend/backend developer silo model into a more cohesive engineering team mentality. Expansion of agile methodologies within the team, including the adoption of kanban, including tshirt sizing and BDD. Bridging the gap between engineering and Customer Support (CS) through the hiring of Application Support engineers. Architectural mentorship of software engineers, and wider technical mentorship of non-engineering staff. }
-
-\entry
-{December 2019 - August 2020}
-{Scratch Financial, a Fintech Startup}
-{Consultant Cloud Architect}
-{Ownership of internal platform services, leading the design, implementation, and training for the re-platforming of Scratchpay.com. First line 1-to-1s for operations team. Budgeting and cost optimisation of processes and tooling, with an emphasis on self-service platforms and open-source tooling.}
-
-\entry
-{October 2018 - August 2019}
-{The Culture Trip, an Online Travel Startup}
-{Site Reliability Engineering Manager}
-{Leading engineers and squads, between a London team and a Tel Aviv team, towards thinking of Supportability first for products. Within this I spent roughly half of my time producing materials, with developer stakeholders, around training and policy for supporting products in production, and the other half developing vendor relationships. I trained, ran, and managed the Incident Management group with a focus on skilling-up team members. I doubled the size of the reliability team with both external recruitment, and by offering junior members of the team opportunities to train and learn on the job, all within two months.}
-
-\entry
-{February 2017 - October 2018}
-{Beamly Ltd., a Marketing Startup}
-{Principal Engineer, Platform Lead}
-{Design, ownership, and management of the award-winning Beamly Fragrance Finder platform, an AI driven chatbot which mapped user-profiles, personality questions, and decades worth of customer knowledge to purchasing recommendations; this team was massively behind-deadline and close to being over-budget when I was brought on to manage it. Through aggressive hiring, stakeholder management, and a general re-architecture of the platform, I brought it in on-time, under-budget, and was able to work alongside the sales team to restore trust to the product, making money for the company. I also grew the Platform Engineering team to 15 people, provided technical leadership through coaching and training, and running 1-to-1s, performance reviews, and promotion applications.}
-
-\entry
-{April 2016 - November 2016}
-{Financial Times, one of the World's largest newspapers}
-{Contract Integration Engineer}
-{To architect, develop and rollout the FT's new flagship video platform, including custom config management tooling, container platform, consul backed routing and api driven monitoring based on shopify's \emph{dashing}, with logs being shipped into Splunk, and deployment artefacts being stored in Nexus.}
-
-\entry
-{July 2015 - April 2016}
-{Financial Times, one of the World's largest newspapers}
-{Contract Integration Engineer; API Technical Lead}
-{To build and maintain a large scale API gateway for internal customers and b2b targets, and the governance thereof; while developing new products, coaching permanent staff toward their personal development goals, and training offshore teams in the management of this gateway.}
-
-\end{tabular*}
-
-\section{Employment, continued}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  \entry
-{November 2013 - June 2015}
-{Funding Circle, a Fintech Startup}
-{Devops Engineer}
-{Green field build out of deployment tooling and testing platform, re-architecture of platform and underlying databases; development of DevOps practices and mentoring; editorship of the funding circle tech blog.}
-
-\entry
-{June 2013 - November 2013}
-{Hogarth Worldwide, part of the WPP group}
-{Senior Devops Engineer}
-{Management of large video platform for multinational advertising house, developer of ops tooling and creation and management of api gateway for client; mentorship of junior colleagues.}
-
-\entry
-{January 2012 - June 2013}
-{Simply Business, a Fintech startup}
-{Production Systems Administrator}
-{Development and management of jit tooling platform, ops assistance and tooling to qa teams, development and management of backup and disk management tooling; mentorship and training junior colleagues.}
-
-\entry
-{July 2010 - December 2012}
-{Coreix ltd., an ISP and Datacenter provider}
-{Senior Technician/Lead}
-{Management of pen testing, integration testing of cloud platforms, helped take down k00bface worm; internal tools development and testing.}
-
-\end{tabular*}
-
-\section{Education}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  \entry
-  {2017 - ongoing}
-  {Open University}
-  {Bachelor of Engineering}
-  {Open University distance learning course}
-
-  \entry
-  {2007 - 2009}
-  {University of Huddersfield}
-  {Secure and Forensic Computing}
-  {Two years credits to a degree, no longer being pursued}
-
-  \entry
-  {2004 - 2008}
-  {John Leggott College, Scunthorpe}
-  {A level Tort Law, Media Studies; AS level Politics, Critical Thinking}
-
-\end{tabular*}
-
+\input{includes/systems.tex}
+\input{includes/languages.tex}
+\input{includes/portfolio.tex}
+\input{includes/employment.tex}
+\input{includes/education.tex}
 
 \end{document}

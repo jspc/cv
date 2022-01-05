@@ -5,19 +5,22 @@ CVS :=  dist/jamescondron_dx_cv.pdf   \
 	dist/jamescondron_sre_cv.pdf  \
 	dist/jamescondron_vpe_cv.pdf
 
-URLFILES := dx/.tag-ref   \
-	    sre/.tag-ref  \
-	    vpe/.tag-ref
+INCLUDES := includes/headpiece.tex  \
+	    includes/systems.tex    \
+	    includes/portfolio.tex  \
+	    includes/languages.tex  \
+	    includes/employment.tex \
+	    includes/education.tex
 
 build: dist $(CVS)
 
-urls: $(URLFILES)
+urls: .tag-ref
 
 dist:
 	mkdir -p dist
 
-%/.tag-ref:
+.tag-ref:
 	printf $(GITHUB_SHORT_REF) > $@
 
-dist/jamescondron_%_cv.pdf: %/cv.tex | dist
+dist/jamescondron_%_cv.pdf: %/cv.tex $(INCLUDES) | dist
 	xelatex -jobname=$(basename $@) $<
