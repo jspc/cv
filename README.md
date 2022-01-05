@@ -2,13 +2,13 @@
 
 This project provides my CV; it uses no external classes/ typefaces which aren't generally distributed with latex distributions.
 
-This project contains two CVs, my CV for SRE work, and my CV for DX work. Either CV can be built in the same way, by navigating to the relevant subdirectory (`sre` for SRE stuff, `dx` for Developer Experience/ Tooling) and following the step(s) in the Building section below.
-
-Building
---
+This project contains thre CVs, my CV for SRE work, my CV for DX work, and my CV for managerial work. Either CV can be built in the same way, with make:
 
 ```bash
-$ texi2pdf cv.tex
+$ make                               # builds all
+$ make dist/jamescondron_dx_cv.pdf   # builds my DX cv
+$ make dist/jamescondron_sre_cv.pdf  # builds my SRE cv
+$ make dist/jamescondron_vpe_cv.pdf  # builds my managerial cv
 ```
 
 Licence
@@ -16,7 +16,7 @@ Licence
 
 MIT License
 
-Copyright (c) 2016, 2019 jspc
+Copyright (c) 2016, 2019, 2021, 2022 jspc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
