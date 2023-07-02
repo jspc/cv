@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper,sans]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.8]{geometry}
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{3.5ex}{1.5ex}
+
+\newcommand{\entry}[4]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\input{./includes/headpiece.tex}
+
+\section{Specialities}
+\begin{tabular}{lll}
+  \tabitem Technical Leadership & \tabitem Coaching & \tabitem Agile Methodologies \\
+  \tabitem Delivery Management & \tabitem Stakeholder Engagement & \tabitem Solutions Architecture \\
+  \tabitem golang & \tabitem python & \tabitem Reliability Engineering \\
+
+\end{tabular}
+
+\section{About me}
+A Software Engineering specialist working across a spectrum of companies, industries, and teams, I have predominantly spent my career building SaaS platforms, both internally and client facing, with a focus on Developer Experience principles. \\
+\\
+As an Engineering Manager I bring a wealth of experience in building and promoting a culture of engineering excellence through data-driven people management, actionable goal setting through meaningful 1-to-1s, and delivery and capacity management; all through the nurturing of talent through a DE\&I lens.\\
+\\
+I Specialise in:
+
+\begin{itemize}
+\item Building and scaling up teams
+  \begin{itemize}
+  \item Introducing data-driven, rubric based recruitment processes
+  \item Building career ladders introducing clear, goal driven promotion paths
+  \item Ensuring engineers have clear professional goals, increasing engagement and reducing attrition and turnover
+  \item Continually assessing team culture, ensuring cultures grow, adapt, and reflect the values of the people within a team
+  \end{itemize}
+\item Hands-on technical leadership
+  \begin{itemize}
+  \item Leading and enabling architecture/ whiteboard sessions
+  \item Incident management and troubleshooting, using skills gained from my time running NOCs in datacentres
+  \item Using my years as an engineer to bring credibility as an Engineering Manager
+  \end{itemize}
+\item Agile methodologies, delivery management
+  \begin{itemize}
+  \item Over a decade working within Scrum
+  \item Applying Kanban methodologies into Platform teams, which typically eschew such oversight
+  \item Maintaining delivery and capacity plans
+  \end{itemize}
+\end{itemize}
+
+\input{includes/languages.tex}
+\input{includes/portfolio.tex}
+\input{includes/employment.tex}
+\input{includes/education.tex}
+
+\end{document}

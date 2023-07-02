@@ -1,9 +1,8 @@
 GITHUB_REF ?= main
 GITHUB_SHORT_REF := $(lastword $(subst /, ,$(GITHUB_REF)))
 
-CVS :=  dist/jamescondron_dx_cv.pdf   \
-	dist/jamescondron_sre_cv.pdf  \
-	dist/jamescondron_vpe_cv.pdf
+CVS :=  dist/jamescondron_ic_cv.pdf   \
+	dist/jamescondron_management_cv.pdf
 
 INCLUDES := includes/headpiece.tex  \
 	    includes/systems.tex    \
