@@ -23,3 +23,7 @@ dist:
 
 dist/jamescondron_%_cv.pdf: %/cv.tex $(INCLUDES) | dist
 	xelatex -jobname=$(basename $@) $<
+
+.PHONY: spellcheck
+spellcheck: */*.tex
+	for F in $(shell git diff --name-only); do aspell --mode=tex check $$F; done
