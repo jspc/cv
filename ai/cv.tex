@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper,sans]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.8]{geometry}
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{3.5ex}{1.5ex}
+
+\newcommand{\entry}[4]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\newcommand{\job}{Engineering Lead/ Principal Engineer}
+\input{./includes/headpiece.tex}
+
+\section{Specialities}
+\begin{tabular}{lll}
+  \tabitem golang & \tabitem Node.js/ Javascript & \tabitem Python \\
+  \tabitem Kubernetes & \tabitem Helm, Kustomize & \tabitem Data Platform Engineering \\
+  \tabitem Tensorflow & \tabitem Keras & \tabitem Numpy \\
+  \tabitem Automation & \tabitem AWS, GCP, Azure & \tabitem Terraform  \\
+\end{tabular}
+
+\section{About me}
+A Software Engineering specialist working within Platform and Data Platform Engineering, I have spent the majority of my career working across teams, geographically or by responsibility, solving scaling and performance in large scale production systems; largely split between Publishing and Finance, though with no small amount of ISP and Datacenter work. \\
+\\
+I have a proven track record in delivering scalable data platforms, built to ingest from many different sources, and designing and implementing fitting and modelling on top of this data. Recent projects include building tensorflow models which, given huge amounts of system and product data, predict failures on huge gaming sites.
+\\
+I Specialise in
+
+\begin{itemize}
+\item Linux engineering and administration
+\item Distributed Systems using Go, Rust, and with a Kafka backbone
+\item Architecture and Systems Design
+\item Technical Team Coaching and Mentorship
+\item Building and maintaining stakeholder confidence
+\item Building and nurturing technical teams using \href{https://www.mindtools.com/pages/article/servant-leadership.htm}{Servant-Leadership principals}
+\item Tensorflow and Keras
+\item Elasticsearch; lucene query design and cluster management specifically
+\item Time-series data and databases
+\item Word Embedding Model design and NLP
+\end{itemize}
+
+\input{includes/systems.tex}
+\input{includes/languages.tex}
+\input{includes/portfolio.tex}
+\input{includes/employment.tex}
+\input{includes/education.tex}
+
+\end{document}
