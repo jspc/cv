@@ -9,7 +9,8 @@ INCLUDES := includes/headpiece.tex  \
 	    includes/portfolio.tex  \
 	    includes/languages.tex  \
 	    includes/employment.tex \
-	    includes/education.tex
+	    includes/education.tex  \
+	    includes/chatgpt.tex
 
 build: dist $(CVS)
 
